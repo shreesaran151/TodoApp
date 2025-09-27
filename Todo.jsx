@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Todo.css"; // reuse your CSS
+import "./Todo.css"; 
 
 function TodoApp() {
   const [taskName, setTaskName] = useState("");
@@ -8,7 +8,7 @@ function TodoApp() {
   const [dueDate, setDueDate] = useState("");
   const [tasks, setTasks] = useState([]);
 
-  // Add Task
+
   const addTask = () => {
     if (!taskName || !startDate || !dueDate) {
       alert("Please fill all fields");
@@ -26,19 +26,19 @@ function TodoApp() {
 
     setTasks([...tasks, newTask]);
 
-    // Reset form
+   
     setTaskName("");
     setPriority("Medium");
     setStartDate("");
     setDueDate("");
   };
 
-  // Delete Task
+  
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
-  // Edit Task
+ 
   const editTask = (task) => {
     setTaskName(task.taskName);
     setPriority(task.priority);
